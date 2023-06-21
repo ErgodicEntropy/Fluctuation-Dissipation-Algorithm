@@ -1,6 +1,8 @@
 # Fluctuation-Dissipation-Algorithm
 Introducing the Fluctuation-Dissipation algorithm! An optimization algorithm inspired from statistical physics notions such as the Boltzmann-Gibbs distribution as well as H-theorem, and more precisely Fluctuation-Dissipation theorem.This project is a tribute to the genius of Ludwig Boltzmann 
-
+## H-Theorem, Boltzmann's entropy formula and Boltzmann Transport equation
+## Boltzmann-Gibbs Distribution
+## Maxwell-Boltzmann Distribution
 ## Fluctuation-Dissipation theorem
 Fluctuation-Dissipation theorem (Herbert Callen and Theodore Welton, 1951) is a theorem in statistical physics that entails, in the case of systems obeying detailed balance, that thermodynamic fluctuations can predict the response quantified by impedance/admittance (abstracted notion) and vice versa. Examples include Brownian motion, Johnson noise and Kirchhoff law of Thermal Radiation. The theorem provides a connection between the microscopic behavior of a system (fluctuations) and its macroscopic response (dissipation) in equilibrium conditions.
 
@@ -61,7 +63,7 @@ Algorithmic Correspondence Rule of Thumb: Specificity = Don’t restrict develop
 ### F-D System:
 1. Linear (no chaos, no complexity, no threshold effects, no hysteresis effects, no multipicities of outputs given one input, no response absence...etc)
 2. Static: the system functionality is constant
-3. Continuous or Discrete -> Fitness function and Solution representation
+3. Continuous or Discrete -> Fitness function and Solution representation (Permutation, Boolean, Space coordinate...etc)
 4. Deterministic: it has a deterministic functioning that is not stochastic (zero shannon entropy)
 5. Explicit: All input parameters are known and thus not implicit
 
@@ -143,5 +145,7 @@ Exploration [exploring the search space]= Thermodynamic fluctuation-driven Shaki
 2. UE = ‘'wasted’'void energy in the sense of the optimization algorithm, DHE = Exploitation: less realistic scenario but this is more compatible with the positive feedback loop system in the sense that dissipation heat energy is resulting from exploiting solutions (acting as dissipative forces themselves), and this DHE is partially or fully converted into fluctuations via algorithmic shaking while the rest is lost in void, particles fluctuate and explore other solutions, and in the process, they get to dissipate energy which is going to be harnessed in exploitation thus the following cycle: DHE [exploitation]→ fluctuations [exploration] → DHE → fluctuations…etc with void being optional.
 
 ### Fluctuation-Dissipation theorem as a feedback loop between Exploration and Exploitation: 
-
+### Equipartition theorem: Maximizing coverage and exploration
+### Diffusion theory (Einstein relation): Maximizing mobility
+### Memory-based Random Walk/Markov Chain (MSD Diffusion memoization): Minimzing depth via aspiration criteria (tabu tenure)
 
