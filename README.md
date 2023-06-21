@@ -8,15 +8,18 @@ Susceptibility is a measure of the system's sensitivity to external perturbation
 
 Examples:
 
-Brownian motion (Albert Einstein, 1905): drag forces (air/fluid resistance) dissipates kinetic energy in the form of heat which, due to thermal agitation captured by Boltzmann distribution-factor, is converted to molecular kinetic energy (which is the microscopic definition of temperature). This is well captured by Einstein relation:
+### Brownian motion (Albert Einstein, 1905):
+Drag forces (air/fluid resistance) dissipates kinetic energy in the form of heat which, due to thermal agitation captured by Boltzmann distribution-factor, is converted to molecular kinetic energy (which is the microscopic definition of temperature). This is well captured by Einstein relation:
 
 ![Einstein relation](Images/EinsteinRelation.png)
 
-Johnson-Nyquist noise (John Johnson and Harry Nyquist,1928): in RC circuits, resistors dissipate electrical energy (decreasing electrical current) in the form of Joule-heat energy. However, the current is never exactly zero, and that’s due to the electrons mobility and agitation galvanized by the heat in the wire loop, thus giving back electrical energy (electrons movement). This is captured by the Johnson-Nyquist equation of the mean-square voltage:
+### Johnson-Nyquist noise (John Johnson and Harry Nyquist,1928):
+In RC circuits, resistors dissipate electrical energy (decreasing electrical current) in the form of Joule-heat energy. However, the current is never exactly zero, and that’s due to the electrons mobility and agitation galvanized by the heat in the wire loop, thus giving back electrical energy (electrons movement). This is captured by the Johnson-Nyquist equation of the mean-square voltage:
 
 ![Johnson Nyquist equation](Images/JN_Equation.png)
 
-Thermal radiation(Gustav Kirchhoff ,1860): Kirchhoff law says that the more light a body effectively absorbs (absorbtivity), the more light energy/thermal radiation it will emit. This is mathematically written in the form of absorptivity = emissivity:
+### Thermal radiation(Gustav Kirchhoff ,1860):
+Kirchhoff law says that the more light a body effectively absorbs (absorbtivity), the more light energy/thermal radiation it will emit. This is mathematically written in the form of absorptivity = emissivity:
 
 ![Kirchhoff's law](Images/Kirchhoff_Law.png)
 
