@@ -10,6 +10,13 @@ H value is determined by the energy distribution function f(E,t)dE which represe
 Therefore, for each occupation probability distribution with respect to kinetic energy or speed, there is a H value that represents that overall distribution.
 One such consequence of the H-theorem is the famous Maxwell-Bolztmann distribtuion describing the number or fraction of molecules (occupation probability) with a given speed (average speed or most occuring speed) in thermal equilibrium. Maxwell-Bolztmann distribution is a natural outcome in thermodynamic equilibrium that is reached when H is minimum
 ## Boltzmann-Gibbs Distribution (Boltzmann factor)
+The Boltzmann distribution is derived from statistical mechanics and relies on the concept of entropy. According to the Boltzmann distribution, the probability P(E) of finding a system in a specific energy state E is proportional to the exponential of the negative ratio of the energy E to the product of the Boltzmann constant (k) and the temperature (T):
+
+P(E) = (1/Z) * exp(-E / (k * T))
+
+In this equation, Z represents the partition function, which acts as a normalization constant to ensure that the probabilities sum up to 1 over all possible energy states.
+
+The Boltzmann distribution shows that lower energy states have higher probabilities of being occupied than higher energy states. As the temperature increases, the distribution becomes more spread out, allowing higher energy states to have a higher probability of being occupied.
 ## Fluctuation-Dissipation theorem
 Fluctuation-Dissipation theorem (Herbert Callen and Theodore Welton, 1951) is a theorem in statistical physics that entails, in the case of systems obeying detailed balance, that thermodynamic fluctuations can predict the response quantified by impedance/admittance (abstracted notion) and vice versa. Examples include Brownian motion, Johnson noise and Kirchhoff law of Thermal Radiation. The theorem provides a connection between the microscopic behavior of a system (fluctuations) and its macroscopic response (dissipation) in equilibrium conditions.
 
