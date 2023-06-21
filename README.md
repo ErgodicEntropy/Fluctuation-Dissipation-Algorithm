@@ -126,14 +126,17 @@ Exploration [exploring the search space]= Thermodynamic fluctuation-driven Shaki
 
 ### F-D equation: capturing the conversion mechanism between DHE, Algorithmic Shaking and UE = DHE-AS equation + AS-UE energy:
 
-1. Einstein-Smoluchowski relation
-2. Johnson-Nyquist equation
-3. Stefan-Boltzmann law
-4. Wien’s approximation law
-5. Planck’s law
-6. Kirchhoff’s law
-7. Boltzmann-Gibbs distribution
-8. Customized equation (phenomenological via coefficients)
+1. Einstein relation
+2. Einstein-Smoluchowski relation
+3. Stokes-Einstein equation
+4. Nernst-Einstein equation
+5. Johnson-Nyquist equation
+6. Stefan-Boltzmann law
+7. Wien’s approximation law
+8. Planck’s law
+9. Kirchhoff’s law
+10. Boltzmann-Gibbs distribution (exploiting the Boltzmann factor)
+11. Customized equation (phenomenological via coefficients)
 
 ### Implementation mode of Etot:
 1. UE = Exploitation, DHE = Exploration (via F-D): In this case, the external perturbation is purported to exploit the solutions found so far, this is captured in the useful/utility energy whilst the rest of energy is ‘'wasted’' in the form of dissipated Joule-heat energy which, according to F-D theorem, is partially (due to 2nd law of thermodynamics/entropy production) or fully (customized scenario) converted back to: [1st scenario] useful energy while the rest is converted to reverse process in the form of fluctuations via algorithmic shaking (random shuffling). [2nd scenario]: fluctuations via algorithmic shaking (random shuffling) while the rest is converted into void energy that is irreversibly lost forever (2nd law). [3rd scenario]: useful energy while the rest is converted into void energy that is irreversibly lost forever (2nd law)
