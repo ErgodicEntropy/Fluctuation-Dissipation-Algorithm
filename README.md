@@ -32,5 +32,18 @@ f(t) is the oscillatory field perturbing the Hamiltonian:
 
 ![Perturbation Field](Images/ExternalPerturbation.png)
 
+## Microscopic Reversibility
 
+Microscopic time-reversibility is a fundamental principle in physics and chemistry. It states that the microscopic dynamics of particles are time-reversible because the microscopic equations of motion are symmetric with respect to inversion in time (T-symmetry) entailing microscopic information conversation [Noether’s theorem]. There are 3 macroscopic consequences of the microscopic reversibility property: Principle of Detailed Balance,  Wegscheider's conditions for the generalized mass action law and Onsager Reciprocal relations
+
+
+# Principle of Detailed Balance:
+1- The principle of detailed balance (L. Boltzmann, 1872): Statistical description of macroscopic/mesoscopic systems/processes as statistical ensembles (probability distributions over microstates) of elementary processes (collisions, reactions…etc) where, given thermodynamic equilibrium, every elementary process is equilibrated with its own reverse process with the same average rate of taking place. The principle of detailed balance was used in Boltzmann equation as to prove H-theorem concerning the Entropy Production (Principle of detailed balance is a sufficient but not necessary condition for entropy increase). That said, microscopic reversibility was used by L. Boltzmann to prove, as strange as that sounds, macroscopic irreversibility. The principle of detailed balance was also used by James Clerk Maxwell in his gas kinetics works as well as Albert Einstein (1916) in his works on Photoelectric effect and quantum theory of emission-absorption of light.
+
+# Wegscheider's conditions for the generalized mass action law
+2- Wegscheider's conditions for the generalized mass action law (Wegscheider, 1901): Wegscheider's conditions for the generalized mass action law establish the criteria necessary for its applicability in chemical kinetics. These conditions emphasize the concept of microscopic reversibility, which states that the forward and reverse reactions occur at the same rate on a molecular level. To satisfy Wegscheider's conditions, the reaction must be in chemical equilibrium, take place in a uniform system, involve elementary steps, have the slowest step determine the rate, and reach local equilibrium at each step. Additionally, it should not involve significant side reactions. By meeting these requirements, the generalized mass action law accurately describes how the rate of a reaction relates to the concentrations of the species involved, with a foundational reliance on the reversibility of microscopic processes
+
+
+# Onsager Reciprocal relation
+3- Onsager Reciprocal relation (L. Onsager, 1931): The Onsager reciprocal relations are mathematical relationships that describe the symmetry of transport phenomena in equilibrium systems. They state that the transport coefficients, which relate fluxes of different quantities to their corresponding driving forces, have a reciprocal relationship. These relations ensure that the transport processes follow specific symmetries and are applicable in various fields such as physics, chemistry, and engineering. By understanding these relations, we can predict and analyze transport properties in complex systems.
 
