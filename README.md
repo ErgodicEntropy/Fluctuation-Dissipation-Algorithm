@@ -76,7 +76,18 @@ Exploitation [exploiting the current knowledge/solutions] = Energy Dissipation (
 Exploration [exploring the search space]= Thermodynamic fluctuation-driven Shaking (kinetic energy via Brownian motion, electrical energy via Johnson Noise, light energy via Thermal Radiation[Kirchhoff's law of TR]) (Microscopic = Reversible) = Delaying replacement
 
 ### Optimization Algorithm control flow (Flowchart):
-External Perturbation of the system → Susceptibility tuning [handling of system-specific physical mechanisms] + Dissipative forces tuning [2nd law of thermodynamics] → System response function (useful energy + dissipated heat energy) → Etot = UE + DHE [Etot distribution tuning]→ UE is used for exploitation (competition step) while DHE is fed back into the system microscopic particles (positive feedback loop due to Fluctuation-Dissipation theorem and Microscopic reversibility) → Fluctuation of particles used for exploration (self-adaptation step) of further solutions → Finding other near-optimal solutions if possible → particles fluctuation acting as a pseudo-perturbation (weaker actually) via information exchange/communication protocol (collaboration step) → Steering the macroscopic system towards favorable solutions found by particles fluctuations → DHE conversion to UE (positive feedback loop due to Fluctuation-Dissipation theorem and Microscopic reversibility) → Repeat until Etot tapers off to zero (preferably with unbalancing Etot distribution towards UE more than DHE as the algorithm goes)
+1. External Perturbation of the system
+2. Susceptibility tuning [handling of system-specific physical mechanisms]
+3. Dissipative forces tuning [2nd law of thermodynamics]
+4. System response function (useful energy + dissipated heat energy)
+5. Etot = UE + DHE [Etot distribution tuning]
+6. UE is used for exploitation (competition step) while DHE is fed back into the system microscopic particles (positive feedback loop due to Fluctuation-Dissipation theorem and Microscopic reversibility)
+7. Fluctuation of particles used for exploration (self-adaptation step) of further solutions
+8. Finding other near-optimal solutions if possible
+9. particles fluctuation acting as a pseudo-perturbation (weaker actually) via information exchange/communication protocol (collaboration step)
+10. Steering the macroscopic system towards favorable solutions found by particles fluctuations
+11. DHE conversion to UE (positive feedback loop due to Fluctuation-Dissipation theorem and Microscopic reversibility)
+12. Repeat until Etot tapers off to zero (preferably with unbalancing Etot distribution towards UE more than DHE as the algorithm goes)
 
 ### Algorithm Hyperparameter tuning (Algorithm meta-functionality/model-parameters):
 1. M = 8 #Number of atoms in a molecule
@@ -116,5 +127,9 @@ External Perturbation of the system → Susceptibility tuning [handling of syste
 6. Kirchhoff’s law
 7. Boltzmann-Gibbs distribution
 8. Customized equation (phenomenological via coefficients)
+
+### Implementation mode of Etot:
+1. UE = Exploitation, DHE = Exploration (via F-D): In this case, the external perturbation is purported to exploit the solutions found so far, this is captured in the useful/utility energy whilst the rest of energy is ‘'wasted’' in the form of dissipated Joule-heat energy which, according to F-D theorem, is partially (due to 2nd law of thermodynamics/entropy production) or fully (customized scenario) converted back to: [1st scenario] useful energy while the rest is converted to reverse process in the form of fluctuations via algorithmic shaking (random shuffling). [2nd scenario]: fluctuations via algorithmic shaking (random shuffling) while the rest is converted into void energy that is irreversibly lost forever (2nd law). [3rd scenario]: useful energy while the rest is converted into void energy that is irreversibly lost forever (2nd law)
+2. UE = ‘'wasted’'void energy in the sense of the optimization algorithm, DHE = Exploitation: less realistic scenario but this is more compatible with the positive feedback loop system in the sense that dissipation heat energy is resulting from exploiting solutions (acting as dissipative forces themselves), and this DHE is partially or fully converted into fluctuations via algorithmic shaking while the rest is lost in void, particles fluctuate and explore other solutions, and in the process, they get to dissipate energy which is going to be harnessed in exploitation thus the following cycle: DHE [exploitation]→ fluctuations [exploration] → DHE → fluctuations…etc with void being optional.
 
 
