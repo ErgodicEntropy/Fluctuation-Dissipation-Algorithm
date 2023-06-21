@@ -46,13 +46,75 @@ f(t) is the oscillatory field perturbing the Hamiltonian:
 Microscopic time-reversibility is a fundamental principle in physics and chemistry. It states that the microscopic dynamics of particles are time-reversible because the microscopic equations of motion are symmetric with respect to inversion in time (T-symmetry) entailing microscopic information conversation [Noether’s theorem]. There are 3 macroscopic consequences of the microscopic reversibility property: Principle of Detailed Balance,  Wegscheider's conditions for the generalized mass action law and Onsager Reciprocal relations
 
 
-# Principle of Detailed Balance:
+### Principle of Detailed Balance:
 1- The principle of detailed balance (L. Boltzmann, 1872): Statistical description of macroscopic/mesoscopic systems/processes as statistical ensembles (probability distributions over microstates) of elementary processes (collisions, reactions…etc) where, given thermodynamic equilibrium, every elementary process is equilibrated with its own reverse process with the same average rate of taking place. The principle of detailed balance was used in Boltzmann equation as to prove H-theorem concerning the Entropy Production (Principle of detailed balance is a sufficient but not necessary condition for entropy increase). That said, microscopic reversibility was used by L. Boltzmann to prove, as strange as that sounds, macroscopic irreversibility. The principle of detailed balance was also used by James Clerk Maxwell in his gas kinetics works as well as Albert Einstein (1916) in his works on Photoelectric effect and quantum theory of emission-absorption of light.
 
-# Wegscheider's conditions for the generalized mass action law
+### Wegscheider's conditions for the generalized mass action law
 2- Wegscheider's conditions for the generalized mass action law (Wegscheider, 1901): Wegscheider's conditions for the generalized mass action law establish the criteria necessary for its applicability in chemical kinetics. These conditions emphasize the concept of microscopic reversibility, which states that the forward and reverse reactions occur at the same rate on a molecular level. To satisfy Wegscheider's conditions, the reaction must be in chemical equilibrium, take place in a uniform system, involve elementary steps, have the slowest step determine the rate, and reach local equilibrium at each step. Additionally, it should not involve significant side reactions. By meeting these requirements, the generalized mass action law accurately describes how the rate of a reaction relates to the concentrations of the species involved, with a foundational reliance on the reversibility of microscopic processes
 
 
-# Onsager Reciprocal relation
+### Onsager Reciprocal relation
 3- Onsager Reciprocal relation (L. Onsager, 1931): The Onsager reciprocal relations are mathematical relationships that describe the symmetry of transport phenomena in equilibrium systems. They state that the transport coefficients, which relate fluxes of different quantities to their corresponding driving forces, have a reciprocal relationship. These relations ensure that the transport processes follow specific symmetries and are applicable in various fields such as physics, chemistry, and engineering. By understanding these relations, we can predict and analyze transport properties in complex systems.
+
+## How can this be exploited algorithmically? 
+Algorithmic Correspondence Rule of Thumb: Specificity = Don’t restrict development to analogies and metaphors only. Instead, integrate actual functionalities and mechanisms (control flow of the code) from nature on top of mere analogies and metaphors.
+### Population algorithms steps:
+
+1. Self-adaptation: Different particles randomly exploring optimal solutions in the search space (Exploration = 1)
+2. Cooperation: Information exchange between particles in order to steer the collective ensemble towards more search regions where optimal solutions might exist but it is a good practice that a subset of the collective ensemble continue on random search (1/2 Exploration-1/2 Exploitation)
+3. Competition: Selection, filtration and survival based on comparison between each particle’s fitness function (Exploitation = 1)
+
+### Algorithm components:
+1. Depth: the cost of the current (best) solution → tabu tenure, memory structure and aspiration criteria
+2. Mobility: the ability to rapidly move to different areas of the search space (whilst keeping the cost low);
+3. Coverage: how systematically the search covers the search space, the maximum distance between any unexplored assignment and all visited assignments.
+
+### Exploration-Exploitation paradigm:
+
+Exploitation [exploiting the current knowledge/solutions] = Energy Dissipation (Joule-heat energy [drag, resistor, absorption]) (Macroscopic-Mesoscopic = Irreversible) = Replacement and Selection
+
+Exploration [exploring the search space]= Thermodynamic fluctuation-driven Shaking (kinetic energy via Brownian motion, electrical energy via Johnson Noise, light energy via Thermal Radiation[Kirchhoff's law of TR]) (Microscopic = Reversible) = Delaying replacement
+
+### Optimization Algorithm control flow (Flowchart):
+External Perturbation of the system → Susceptibility tuning [handling of system-specific physical mechanisms] + Dissipative forces tuning [2nd law of thermodynamics] → System response function (useful energy + dissipated heat energy) → Etot = UE + DHE [Etot distribution tuning]→ UE is used for exploitation (competition step) while DHE is fed back into the system microscopic particles (positive feedback loop due to Fluctuation-Dissipation theorem and Microscopic reversibility) → Fluctuation of particles used for exploration (self-adaptation step) of further solutions → Finding other near-optimal solutions if possible → particles fluctuation acting as a pseudo-perturbation (weaker actually) via information exchange/communication protocol (collaboration step) → Steering the macroscopic system towards favorable solutions found by particles fluctuations → DHE conversion to UE (positive feedback loop due to Fluctuation-Dissipation theorem and Microscopic reversibility) → Repeat until Etot tapers off to zero (preferably with unbalancing Etot distribution towards UE more than DHE as the algorithm goes)
+
+### Algorithm Hyperparameter tuning (Algorithm meta-functionality/model-parameters):
+1. M = 8 #Number of atoms in a molecule
+2. N = 50 # Number of molecules of the system
+3. E_P_Number = 1 #External Perturbation number: number of times we perturb the system externally to steer it towards exploitation direction
+4. Hys = False #Hysteresis effect (only make sense if E_P_Number > 1)
+5. Th = False #Threshold effect
+6. FC =0.5 #Fluctuation/Algorithmic Shaking coefficient (F-D equation)
+7. VC = 0.5 #Lost-Forever Void energy coefficient (F-D Equation)
+#### FC = VC = 0.5 (always) is a representation of Equipartition theorem as well as Virial theorem
+8. E_P_S = 3 #Strength of external perturbation
+9. S_R = 2 # susceptibilty rate: measure system's sensitivity to perturbation (high susceptibility -> strong response) [Smart-Active Systems]
+10. CF = 0.8 # Cooling factor (closer to one in order to avoid premature convergence by making the cooling process progressive and gradual)
+11. C = 1.5 #Exploitation cost (though not necessary, but it's essential for the algorithm correspodence)
+
+#### there are two ways in quantifying the response: EPS-SR threshold relationship (but you lose proportionality) or Etot = SR x EPS (this relationship assumes the linearity of the system thus the proprotionality between Etot and EPS as well as absence of hysteresis effects...etc)
+10. Etot = E_P_S*S_R #Total energy of the system quantifying the strength of the resposne (linear response function)
+
+
+
+### Algorithm Parameter tuning (Algorithm functionality/model-parameters):
+1. UE = Useful/Utility Energy (Exploitation energy) eg; Electrical energy, Light energy, Kinetic energy, Mechanical Energy...etc (Actuator)
+2. DHE = Dissipated Heat Energy due to Joule effect (Exploration energy)
+3. UEC = Useful energy coefficient which measures the percentage of total energy (response strength of the system) that is utile
+4. DHEC = Dissipated Heat energy coefficient (Total Dissipative forces)  which measures the percentage of total energy that is dissipated due to Joule effect
+5. FS = global/emergent Fluctuation level via Algorithmic Shaking of molecules (solutions)
+6. VE = Void Energy that is lost forever due to the 2nd law of thermodynamics (not necessary for the functioning of the algorithm as it acts as a validity test with actual physical theories)
+7. PS = molecular fluctuation that each molecule receives equally (Equipartition theorem, Virial theorem)
+
+### F-D equation: capturing the conversion mechanism between DHE, Algorithmic Shaking and UE = DHE-AS equation + AS-UE energy:
+
+1. Einstein-Smoluchowski relation
+2. Johnson-Nyquist equation
+3. Stefan-Boltzmann law
+4. Wien’s approximation law
+5. Planck’s law
+6. Kirchhoff’s law
+7. Boltzmann-Gibbs distribution
+8. Customized equation (phenomenological via coefficients)
+
 
