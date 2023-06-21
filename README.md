@@ -89,7 +89,7 @@ Algorithmic Correspondence Rule of Thumb: Specificity = Don’t restrict develop
 
 ### Algorithm components:
 1. Depth: the cost of the current (best) solution → tabu tenure, memory structure and aspiration criteria
-2. Mobility: the ability to rapidly move to different areas of the search space (whilst keeping the cost low);
+2. Mobility: the ability to rapidly move to different areas of the search space (whilst keeping the cost low) (Continuous Optimization problems only)
 3. Coverage: how systematically the search covers the search space, the maximum distance between any unexplored assignment and all visited assignments.
 
 ### Exploration-Exploitation paradigm:
@@ -166,6 +166,7 @@ The Equipartition theorem states that in thermal equilibrium, each degree of fre
 The equipartition theorem is useful in the algorithm because it equally gives away the same exploration intensity (fluctuation level) to all molecules (solutions) in order to maximize coverage in the search space. This is motivated by the reasoning that it's better to have all molecules exploring the search space with an average fluctuation rate than to put all eggs in one or few basket molecules that nonetheless have above average fluctuation level (preferring uniform distribution of agitation levels over Zipfian distribution since it will increase coverage overall, especially in the case of discrete optimization problems!)
 
 
-### Diffusion theory (Einstein relation): Maximizing mobility
+### Diffusion theory (Einstein relation): Maximizing mobility (Continuous Optimization problems only)
+Increasing diffusivity via increasing electrical mobility (Einstein-Smoluchowski relation) or decreasing dynamic viscosity (Stokes-Einstein equation)...etc
 ### Memory-based Random Walk/Markov Chain (MSD Diffusion memoization): Minimzing depth via aspiration criteria (tabu tenure) and Loschmidt memory (correlational recording/tracking that break Time-Reversal symmetry and Molecular Chaos)
 
