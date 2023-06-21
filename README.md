@@ -14,7 +14,7 @@ Johnson-Nyquist noise (John Johnson and Harry Nyquist,1928): in RC circuits, res
 
 Thermal radiation(Gustav Kirchhoff ,1860): Kirchhoff law says that the more light a body effectively absorbs (absorbtivity), the more light energy/thermal radiation it will emit
 
-# System theory formulation (General formulation):
+# Systems theory formulation (General formulation):
 
 Systems theoretic formulation of Fluctuation-Dissipation theorem is an input-output formulation of the mechanisms underlying the phenomenon. In fact, one could reformulate most, if not all, of physical laws and theories via systems theory (and specifically, control theory and cybernetics). In the case of F-D theorem, it could be translated into the relationship between the power spectrum S, capture the thermal fluctuations of an observable x(t) around its mean value x(0), and susceptibility (linear response function) X(T) capturing the response function of the dynamical system to an external time-dependent field perturbation f(t). More specifically, the perturbation is on the level of the Hamiltonian of the dynamical system: H(x) = H0(x) - f(t)x. Given that the observable average value is defined as :
 
