@@ -1,4 +1,4 @@
-# Fluctuation-Dissipation-Algorithm
+<img width="62" alt="image" src="https://github.com/ErgodicEntropy/Fluctuation-Dissipation-Algorithm/assets/129313892/79ab37b2-2a2a-4e4b-85cc-b16bb00b919a"># Fluctuation-Dissipation-Algorithm
 Introducing the Fluctuation-Dissipation algorithm! An optimization algorithm inspired from statistical physics notions such as the Boltzmann-Gibbs distribution as well as H-theorem, and more precisely Fluctution-Dissipation theorem.This project is a tribute to the genius of Ludwig Boltzmann 
 
 ## Fluctuation-Dissipation theorem
@@ -8,11 +8,17 @@ Susceptibility is a measure of the system's sensitivity to external perturbation
 
 Examples:
 
-Brownian motion (Albert Einstein, 1905): drag forces (air/fluid resistance) dissipates kinetic energy in the form of heat which, due to thermal agitation captured by Boltzmann distribution-factor, is converted to molecular kinetic energy (which is the microscopic definition of temperature). This is well captured by Einstein-Smoluchowski relation D = nuKT.
+Brownian motion (Albert Einstein, 1905): drag forces (air/fluid resistance) dissipates kinetic energy in the form of heat which, due to thermal agitation captured by Boltzmann distribution-factor, is converted to molecular kinetic energy (which is the microscopic definition of temperature). This is well captured by Einstein relation:
 
-Johnson-Nyquist noise (John Johnson and Harry Nyquist,1928): in RC circuits, resistors dissipate electrical energy (decreasing electrical current) in the form of Joule-heat energy. However, the current is never exactly zero, and that’s due to the electrons mobility and agitation galvanized by the heat in the wire loop, thus giving back electrical energy (electrons movement). This is captured by the Johnson-Nyquist equation of the mean-square voltage  <V**2> = 4RkT<v>
+![Einstein relation](Images/EinsteinRelation)
 
-Thermal radiation(Gustav Kirchhoff ,1860): Kirchhoff law says that the more light a body effectively absorbs (absorbtivity), the more light energy/thermal radiation it will emit
+Johnson-Nyquist noise (John Johnson and Harry Nyquist,1928): in RC circuits, resistors dissipate electrical energy (decreasing electrical current) in the form of Joule-heat energy. However, the current is never exactly zero, and that’s due to the electrons mobility and agitation galvanized by the heat in the wire loop, thus giving back electrical energy (electrons movement). This is captured by the Johnson-Nyquist equation of the mean-square voltage:
+
+![Johnson Nyquist equation](Images/JN_Equation)
+
+Thermal radiation(Gustav Kirchhoff ,1860): Kirchhoff law says that the more light a body effectively absorbs (absorbtivity), the more light energy/thermal radiation it will emit. This is mathematically written in the form of absorptivity = emissivity:
+
+![Kirchhoff's law](Images/Kirchhoff_Law)
 
 ## Systems theory formulation (General formulation):
 
