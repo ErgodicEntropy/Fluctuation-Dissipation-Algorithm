@@ -18,7 +18,7 @@ In RC circuits, resistors dissipate electrical energy (decreasing electrical cur
 
 ![Johnson Nyquist equation](Images/JN_Equation.png)
 
-### Thermal radiation(Gustav Kirchhoff ,1860):
+### Thermal radiation (Gustav Kirchhoff ,1860):
 Kirchhoff law says that the more light a body effectively absorbs (absorbtivity), the more light energy/thermal radiation it will emit. This is mathematically written in the form of absorptivity = emissivity:
 
 ![Kirchhoff's law](Images/Kirchhoff_Law.png)
