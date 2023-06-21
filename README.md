@@ -20,18 +20,16 @@ Systems theoretic formulation of Fluctuation-Dissipation theorem is an input-out
 
 ![AverageObservable](Images/Avg.png)
 
-Thus, the F-D theorem could be states as: ![FD equation](Images/PowerSpectrum_Response.png)
+Thus, the F-D theorem could be states as: 
 
-Where Sx is the power spectrum representing the fluctuations of x(t): ![Power Spectrum](Images/PowerSpectrum.png)
+![FD equation](Images/PowerSpectrum_Response.png)
+
+Where Sx is the power spectrum representing the fluctuations of x(t): 
+
+![Power Spectrum](Images/PowerSpectrum.png)
 
 f(t) is the oscillatory field perturbing the Hamiltonian:
+![Perturbation Field](ExternalPerturbation.png)
 
 
 
-)
-
-
-
-
-
-F-D theorem creates a feedback loop between Exploitation and Exploration of solutions!
