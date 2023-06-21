@@ -63,7 +63,7 @@ Algorithmic Correspondence Rule of Thumb: Specificity = Don’t restrict develop
 ### F-D System:
 1. Linear (no chaos, no complexity, no threshold effects, no hysteresis effects, no multipicities of outputs given one input, no response absence...etc)
 2. Static: the system functionality is constant
-3. Continuous or Discrete -> Fitness function and Solution representation (Permutation, Boolean, Space coordinate...etc)
+3. Continuous or Discrete -> Fitness function and Solution representation (Permutation, Boolean, Space coordinate...etc) (Discrete or Continuous Optimization)
 4. Deterministic: it has a deterministic functioning that is not stochastic (zero shannon entropy)
 5. Explicit: All input parameters are known and thus not implicit
 
