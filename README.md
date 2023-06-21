@@ -29,6 +29,7 @@ Where Sx is the power spectrum representing the fluctuations of x(t):
 ![Power Spectrum](Images/PowerSpectrum.png)
 
 f(t) is the oscillatory field perturbing the Hamiltonian:
+
 ![Perturbation Field](Images/ExternalPerturbation.png)
 
 
