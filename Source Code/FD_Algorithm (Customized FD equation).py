@@ -47,12 +47,12 @@ Etot = E_P_S*S_R #Total energy of the system quantifying the strength of the res
 # PS = molecular fluctuation that each molecule receives equally (Equipartition theorem, Virial theorem)
 
 
-def Cooling(UEC, DHEC):
+def Cooling(UEC, DHEC): # This function is responsible for incrementally steering the thermodynamic system more and more towards exploitation as the timestep counts
     DHEC = CF*DHEC
     UEC = 1 - DHEC
     return UEC, DHEC
     
-def Total_Energy_Distributor(UEC, DHEC):
+def Total_Energy_Distributor(UEC, DHEC): # This function acts as a total energy distributor (pre-actuator) which initially favors Joule energy over utile energy
     UE = UEC*Etot #Useful/Exploitation energy: initially zero because there is nothing to exploit initially
     DHE = DHEC*Etot #Dissipated-Heat/Exploration energy: initially maximum because all optimization algorithms start with exploration
     return UE, DHE
@@ -62,11 +62,11 @@ def Heat_Energy_Distributor(DHE): #This function is a competition between the Fl
     VE = VC*DHE # Lost forever energy due to the 2nd law of thermodynamics
     return FS # FC = VC = 0.5 (always) is a representation of Equipartition theorem as well as Virial theorem
 
-def Shaking_Distributor(FS):
+def Shaking_Distributor(FS): # This function is crucial for optimization, responsible for applying Equipartition theorem as to ensure maximum coverage and exploration
     PS = FS/N #Individual shaking of each molecule/solution (random seed) [methylating FS-UE conversion instead]
     return PS # All molecuels receive the same amount of shaking per iteration (Equipartition theorem, Virial theorem)
 
-def Fluctuation_Dissipation(UEC,DHEC):
+def Fluctuation_Dissipation(UEC,DHEC): # This function is a one-for-all that broadly covers all steps of Fluctuation-Dissipation algorithm
     UEC, DHEC = Cooling(UEC, DHEC)
     UE, DHE = Total_Energy_Distributor(UEC, DHEC)
     FS = Heat_Energy_Distributor(DHE)
