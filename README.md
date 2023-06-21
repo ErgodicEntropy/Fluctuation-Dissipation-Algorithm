@@ -58,7 +58,7 @@ Microscopic time-reversibility is a fundamental principle in physics and chemist
 
 ## How can this be exploited algorithmically? 
 Algorithmic Correspondence Rule of Thumb: Specificity = Don’t restrict development to analogies and metaphors only. Instead, integrate actual functionalities and mechanisms (control flow of the code) from nature on top of mere analogies and metaphors.
-## F-D System:
+### F-D System:
 1. Linear (no chaos, no complexity, no threshold effects, no hysteresis effects, no multipicities of outputs given one input, no response absence...etc)
 2. Static: the system functionality is constant
 3. Continuous or Discrete -> Fitness function and Solution representation
