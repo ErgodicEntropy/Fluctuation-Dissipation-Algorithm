@@ -182,7 +182,7 @@ Exploration [exploring the search space]= Thermodynamic fluctuation-driven Shaki
 4. H decrease: while H > Hmin (for each iteration, H = H - VE) (H-theorem)
 5. Kinetic Energy/Speed- Molecules distribution function: while K-E/Speed Ditribution != M-B Distribution (density estimation-based comparison) (H-theorem)
 6. Boltzmann Transport equation = 3 + 4 + 5: Steady/Equilibrium state of the Boltzmann equation (Thermodynamic equilibrium)
-7. Solution found
+7. Optimal Solution found
 
 ### Fluctuation-Dissipation theorem as a feedback loop between Exploration and Exploitation: 
 Fluctuation is used as a random seed for exploration
