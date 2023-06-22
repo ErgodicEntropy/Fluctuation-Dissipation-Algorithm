@@ -8,7 +8,8 @@ H-theorem is an attempt by L. Boltzmann to derive the second law of thermodynami
 H value is determined by the energy distribution function f(E,t)dE which represents the number or fraction of molecules (occupation probability) having kinetic energy between E and E + dE. H value is precisely: 
 ![H value](Images/H_Value.png)
 Therefore, for each occupation probability distribution with respect to kinetic energy or speed, there is a H value that represents that overall distribution.
-One such consequence of the H-theorem is the famous Maxwell-Bolztmann distribtuion describing the number or fraction of molecules (occupation probability) with a given speed (average speed or most occuring speed) in thermal equilibrium. Maxwell-Bolztmann distribution is a natural outcome in thermodynamic equilibrium that is reached when H is minimum
+One such consequence of the H-theorem is the famous Maxwell-Bolztmann distribtuion describing the number or fraction of molecules (occupation probability) with a given speed (average speed or most occuring speed) in thermal equilibrium. Maxwell-Bolztmann distribution is a natural outcome in thermodynamic equilibrium that is reached when H is minimum.
+At the heart of all this lies the marvelous masterpiece of Ludwig Boltzmann; the Boltzmann Transport equation. the BT equation is a fundamental equation in statistical physics that describes the behavior of particles (such as atoms, molecules, or electrons) in a gas or plasma in non-equilibrium where thehrmodynamic variables are changing . It provides a framework for understanding how particles move, collide, and exchange energy in a system. It describes the statistical distribution of particles in phase space (position-momentum manifold) via the distribution funcion (probability density or occupation probability of finding particles with a specific position, momenmtum, speed or kinetic energy)
 ## Boltzmann-Gibbs Distribution (Boltzmann factor)
 The Boltzmann distribution is derived from statistical mechanics and relies on the concept of entropy. According to the Boltzmann distribution, the probability P(E) of finding a system in a specific energy state E is proportional to the exponential of the negative ratio of the energy E to the product of the Boltzmann constant (k) and the temperature (T):
 
@@ -102,7 +103,7 @@ Exploitation [exploiting the current knowledge/solutions] = Energy Dissipation (
 
 Exploration [exploring the search space]= Thermodynamic fluctuation-driven Shaking (kinetic energy via Brownian motion, electrical energy via Johnson Noise, light energy via Thermal Radiation[Kirchhoff's law of TR]) (Microscopic = Reversible) = Delaying replacement
 
-### Optimization Algorithm control flow (Flowchart):
+### Optimization Algorithm control flow (Flowchart): Algorithmization of the Boltzmann Transport equation (Algorithmic Discretization into Optimization steps)
 1. External Perturbation of the system
 2. Susceptibility tuning [handling of system-specific physical mechanisms]
 3. Dissipative forces tuning [2nd law of thermodynamics]
@@ -161,6 +162,14 @@ Exploration [exploring the search space]= Thermodynamic fluctuation-driven Shaki
 ### Implementation mode of Etot:
 1. UE = Exploitation, DHE = Exploration (via F-D): In this case, the external perturbation is purported to exploit the solutions found so far, this is captured in the useful/utility energy whilst the rest of energy is ‘'wasted’' in the form of dissipated Joule-heat energy which, according to F-D theorem, is partially (due to 2nd law of thermodynamics/entropy production) or fully (customized scenario) converted back to: [1st scenario] useful energy while the rest is converted to reverse process in the form of fluctuations via algorithmic shaking (random shuffling). [2nd scenario]: fluctuations via algorithmic shaking (random shuffling) while the rest is converted into void energy that is irreversibly lost forever (2nd law). [3rd scenario]: useful energy while the rest is converted into void energy that is irreversibly lost forever (2nd law)
 2. UE = ‘'wasted’'void energy in the sense of the optimization algorithm, DHE = Exploitation: less realistic scenario but this is more compatible with the positive feedback loop system in the sense that dissipation heat energy is resulting from exploiting solutions (acting as dissipative forces themselves), and this DHE is partially or fully converted into fluctuations via algorithmic shaking while the rest is lost in void, particles fluctuate and explore other solutions, and in the process, they get to dissipate energy which is going to be harnessed in exploitation thus the following cycle: DHE [exploitation]→ fluctuations [exploration] → DHE → fluctuations…etc with void being optional.
+
+### Termination Criteria: 
+1. Max number of iterations (Max_Iter): while t < Max_Iter
+2. Etot: while Etot > 0 (for each iteration; Etot = Etot - VE)
+3. Entropy Production: while S < Smax (for each iteration, S = S + VE) (Boltzmann's entropy formula)
+4. H decrease: while H > Hmin (for each iteration, H = H - VE) (H-theorem)
+5. Kinetic Energy/Speed- Molecules distribution function: while K-E/Speed Ditribution != M-B Distribution (density estimation-based comparison) (H-theorem)
+6. Boltzmann Transport equation = 3 + 4 + 5: Steady/Equilibrium state of the Boltzmann equation (Thermodynamic equilibrium)
 
 ### Fluctuation-Dissipation theorem as a feedback loop between Exploration and Exploitation: 
 Fluctuation is used as a random seed for exploration
