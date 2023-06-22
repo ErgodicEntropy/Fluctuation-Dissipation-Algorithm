@@ -59,7 +59,30 @@ In this equation, Z represents the partition function, which acts as a normaliza
 
 The Boltzmann distribution shows that lower energy states have higher probabilities of being occupied than higher energy states. As the temperature increases, the distribution becomes more spread out, allowing higher energy states to have a higher probability of being occupied.
 The Boltzmann distribution (Gibbs distribution) is a manifestation of the principle of least effort that shows up again and again in say, analytical mechanics via the principle of least/stationary action (Euler-Lagrange equation or Hamilton principle).
-## Information theory (Shannon entropy, K-L divergence, J-S divergence, Mutual Information, Conditional Entropy...etc)
+## Information theory (relevant concepts to the algorithm):
+
+1. Shannon Entropy: Shannon entropy, named after Claude Shannon, is a measure of the uncertainty or average amount of information in a random variable. It quantifies the amount of information or "surprise" associated with each possible outcome of a random variable. Mathematically, Shannon entropy of a discrete random variable X is defined as:
+H(X) = -Σ P(x) * log2(P(x))
+where P(x) represents the probability of each outcome x of the random variable X. Shannon entropy is always non-negative and reaches its minimum of 0 when the random variable has a single certain outcome.
+2. Conditional Entropy: Conditional entropy measures the average amount of information needed to describe a random variable Y given that another random variable X is known. It captures the remaining uncertainty about Y when X is given. Mathematically, the conditional entropy of Y given X is defined as:
+
+H(Y|X) = -Σ Σ P(x, y) * log2(P(y|x))
+
+where P(x, y) represents the joint probability distribution of X and Y, and P(y|x) represents the conditional probability of Y given X. Conditional entropy is always non-negative and reaches its minimum when Y is completely determined by X.
+
+3. Mutual Information: Mutual information quantifies the amount of information that two random variables X and Y share. It measures the reduction in uncertainty about one variable when the other variable is known. Mathematically, mutual information between X and Y is defined as:
+
+I(X; Y) = Σ Σ P(x, y) * log2(P(x, y) / (P(x) * P(y)))
+
+where P(x, y) is the joint probability distribution of X and Y, and P(x) and P(y) are the marginal probability distributions of X and Y, respectively. Mutual information is always non-negative and reaches its maximum when X and Y are perfectly correlated.
+
+4. Kullback-Leibler (K-L) Divergence: K-L divergence is a measure of the difference between two probability distributions. It quantifies how much one distribution differs from another. Mathematically, the K-L divergence between two discrete probability distributions P and Q is defined as:
+
+DKL(P || Q) = Σ P(x) * log2(P(x) / Q(x))
+
+K-L divergence is not symmetric, meaning DKL(P || Q) is not the same as DKL(Q || P). It is always non-negative and reaches its minimum of 0 when P and Q are identical (Jensen-Shannon divergence or Variational Distance are symmetric versions of K-L divergence)
+
+
 ## Fluctuation-Dissipation theorem
 Fluctuation-Dissipation theorem (Herbert Callen and Theodore Welton, 1951) is a theorem in statistical physics that entails, in the case of systems obeying detailed balance, that thermodynamic fluctuations can predict the response quantified by impedance/admittance (abstracted notion) and vice versa. Examples include Brownian motion, Johnson noise and Kirchhoff law of Thermal Radiation. The theorem provides a connection between the microscopic behavior of a system (fluctuations) and its macroscopic response (dissipation) in equilibrium conditions.
 
