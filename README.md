@@ -17,6 +17,7 @@ P(E) = (1/Z) * exp(-E / (k * T))
 In this equation, Z represents the partition function, which acts as a normalization constant to ensure that the probabilities sum up to 1 over all possible energy states.
 
 The Boltzmann distribution shows that lower energy states have higher probabilities of being occupied than higher energy states. As the temperature increases, the distribution becomes more spread out, allowing higher energy states to have a higher probability of being occupied.
+The Boltzmann distribution (Gibbs distribution) is a manifestation of the principle of least effort that shows up again and again in say, analytical mechanics via the principle of least/stationary action (Euler-Lagrange equation or Hamilton principle).
 ## Fluctuation-Dissipation theorem
 Fluctuation-Dissipation theorem (Herbert Callen and Theodore Welton, 1951) is a theorem in statistical physics that entails, in the case of systems obeying detailed balance, that thermodynamic fluctuations can predict the response quantified by impedance/admittance (abstracted notion) and vice versa. Examples include Brownian motion, Johnson noise and Kirchhoff law of Thermal Radiation. The theorem provides a connection between the microscopic behavior of a system (fluctuations) and its macroscopic response (dissipation) in equilibrium conditions.
 
