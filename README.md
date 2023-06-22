@@ -61,16 +61,15 @@ The Boltzmann distribution shows that lower energy states have higher probabilit
 The Boltzmann distribution (Gibbs distribution) is a manifestation of the principle of least effort that shows up again and again in say, analytical mechanics via the principle of least/stationary action (Euler-Lagrange equation or Hamilton principle).
 ## Information theory (relevant concepts to the algorithm):
 
-1. Shannon Entropy: Shannon entropy, named after Claude Shannon, is a measure of the uncertainty or average amount of information in a random variable. It quantifies the amount of information or "surprise" associated with each possible outcome of a random variable. Mathematically, Shannon entropy of a discrete random variable X is defined as:
+1- Shannon Entropy: Shannon entropy, named after Claude Shannon, is a measure of the uncertainty or average amount of information in a random variable. It quantifies the amount of information or "surprise" associated with each possible outcome of a random variable. Mathematically, Shannon entropy of a discrete random variable X is defined as:
 H(X) = -Σ P(x) * log2(P(x))
-where P(x) represents the probability of each outcome x of the random variable X. Shannon entropy is always non-negative and reaches its minimum of 0 when the random variable has a single certain outcome.
-2. Conditional Entropy: Conditional entropy measures the average amount of information needed to describe a random variable Y given that another random variable X is known. It captures the remaining uncertainty about Y when X is given. Mathematically, the conditional entropy of Y given X is defined as:
+where P(x) represents the probability of each outcome x of the random variable X. Shannon entropy is always non-negative and reaches its minimum of 0 when the random variable has a single certain outcome.\
+2- Conditional Entropy: Conditional entropy measures the average amount of information needed to describe a random variable Y given that another random variable X is known. It captures the remaining uncertainty about Y when X is given. Mathematically, the conditional entropy of Y given X is defined as:
 
 H(Y|X) = -Σ Σ P(x, y) * log2(P(y|x))
 
-where P(x, y) represents the joint probability distribution of X and Y, and P(y|x) represents the conditional probability of Y given X. Conditional entropy is always non-negative and reaches its minimum when Y is completely determined by X.
-3. 
-Joint entropy is a measure in information theory that quantifies the uncertainty or average amount of information contained in a joint probability distribution of multiple random variables. It captures the overall uncertainty associated with the combined set of variables.
+where P(x, y) represents the joint probability distribution of X and Y, and P(y|x) represents the conditional probability of Y given X. Conditional entropy is always non-negative and reaches its minimum when Y is completely determined by X.\
+3- Joint entropy is a measure in information theory that quantifies the uncertainty or average amount of information contained in a joint probability distribution of multiple random variables. It captures the overall uncertainty associated with the combined set of variables.
 
 Mathematically, the joint entropy of a set of random variables X1, X2, ..., Xn is denoted as H(X1, X2, ..., Xn) and is defined as:
 
@@ -78,12 +77,12 @@ H(X1, X2, ..., Xn) = -Σ Σ ... Σ P(x1, x2, ..., xn) * log2(P(x1, x2, ..., xn))
 
 Here, P(x1, x2, ..., xn) represents the joint probability distribution of the variables X1, X2, ..., Xn, and the double summation extends over all possible combinations of values for each variable.
 
-Joint entropy measures the amount of uncertainty or average information needed to describe the combined set of variables. It takes into account the dependencies and correlations between the variables. If the variables are independent, the joint entropy will be the sum of the individual entropies of each variable. As the variables become more dependent, the joint entropy will decrease, indicating a reduction in uncertainty.
-4. Mutual Information: Mutual information quantifies the amount of information that two random variables X and Y share. It measures the reduction in uncertainty about one variable when the other variable is known. Mathematically, mutual information between X and Y is defined as:
+Joint entropy measures the amount of uncertainty or average information needed to describe the combined set of variables. It takes into account the dependencies and correlations between the variables. If the variables are independent, the joint entropy will be the sum of the individual entropies of each variable. As the variables become more dependent, the joint entropy will decrease, indicating a reduction in uncertainty.\
+4- Mutual Information: Mutual information quantifies the amount of information that two random variables X and Y share. It measures the reduction in uncertainty about one variable when the other variable is known. Mathematically, mutual information between X and Y is defined as:
 
 I(X; Y) = Σ Σ P(x, y) * log2(P(x, y) / (P(x) * P(y)))
 
-where P(x, y) is the joint probability distribution of X and Y, and P(x) and P(y) are the marginal probability distributions of X and Y, respectively. Mutual information is always non-negative and reaches its maximum when X and Y are perfectly correlated.
+where P(x, y) is the joint probability distribution of X and Y, and P(x) and P(y) are the marginal probability distributions of X and Y, respectively. Mutual information is always non-negative and reaches its maximum when X and Y are perfectly correlated.\
 
 5. Kullback-Leibler (K-L) Divergence: K-L divergence is a measure of the difference between two probability distributions. It quantifies how much one distribution differs from another. Mathematically, the K-L divergence between two discrete probability distributions P and Q is defined as:
 
