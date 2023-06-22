@@ -73,7 +73,9 @@ Microscopic time-reversibility is a fundamental principle in physics and chemist
 3- Onsager Reciprocal relation (L. Onsager, 1931): The Onsager reciprocal relations are mathematical relationships that describe the symmetry of transport phenomena in equilibrium systems. They state that the transport coefficients, which relate fluxes of different quantities to their corresponding driving forces, have a reciprocal relationship. These relations ensure that the transport processes follow specific symmetries and are applicable in various fields such as physics, chemistry, and engineering. By understanding these relations, we can predict and analyze transport properties in complex systems.
 
 ## How can this be exploited algorithmically? 
-Algorithmic Correspondence Rule of Thumb: Specificity = Don’t restrict development to analogies and metaphors only. Instead, integrate actual functionalities and mechanisms (control flow of the code) from nature on top of mere analogies and metaphors.
+Algorithmic Correspondence Rule of Thumb: 
+1. Specificity = Don’t restrict development to analogies and metaphors only. Instead, integrate actual functionalities and mechanisms (control flow of the code) from nature on top of mere analogies and metaphors.
+2. Irreplacability: if the control flow of the code could be described conceptually otherwise, then the algorithmic correspondence is merely analogical and/or metaphorical, and thus redundant.
 ### F-D System:
 1. Linear (no chaos, no complexity, no threshold effects, no hysteresis effects, no multipicities of outputs given one input, no response absence...etc)
 2. Static: the system functionality is constant
