@@ -69,14 +69,23 @@ where P(x) represents the probability of each outcome x of the random variable X
 H(Y|X) = -Σ Σ P(x, y) * log2(P(y|x))
 
 where P(x, y) represents the joint probability distribution of X and Y, and P(y|x) represents the conditional probability of Y given X. Conditional entropy is always non-negative and reaches its minimum when Y is completely determined by X.
+3. 
+Joint entropy is a measure in information theory that quantifies the uncertainty or average amount of information contained in a joint probability distribution of multiple random variables. It captures the overall uncertainty associated with the combined set of variables.
 
-3. Mutual Information: Mutual information quantifies the amount of information that two random variables X and Y share. It measures the reduction in uncertainty about one variable when the other variable is known. Mathematically, mutual information between X and Y is defined as:
+Mathematically, the joint entropy of a set of random variables X1, X2, ..., Xn is denoted as H(X1, X2, ..., Xn) and is defined as:
+
+H(X1, X2, ..., Xn) = -Σ Σ ... Σ P(x1, x2, ..., xn) * log2(P(x1, x2, ..., xn))
+
+Here, P(x1, x2, ..., xn) represents the joint probability distribution of the variables X1, X2, ..., Xn, and the double summation extends over all possible combinations of values for each variable.
+
+Joint entropy measures the amount of uncertainty or average information needed to describe the combined set of variables. It takes into account the dependencies and correlations between the variables. If the variables are independent, the joint entropy will be the sum of the individual entropies of each variable. As the variables become more dependent, the joint entropy will decrease, indicating a reduction in uncertainty.
+4. Mutual Information: Mutual information quantifies the amount of information that two random variables X and Y share. It measures the reduction in uncertainty about one variable when the other variable is known. Mathematically, mutual information between X and Y is defined as:
 
 I(X; Y) = Σ Σ P(x, y) * log2(P(x, y) / (P(x) * P(y)))
 
 where P(x, y) is the joint probability distribution of X and Y, and P(x) and P(y) are the marginal probability distributions of X and Y, respectively. Mutual information is always non-negative and reaches its maximum when X and Y are perfectly correlated.
 
-4. Kullback-Leibler (K-L) Divergence: K-L divergence is a measure of the difference between two probability distributions. It quantifies how much one distribution differs from another. Mathematically, the K-L divergence between two discrete probability distributions P and Q is defined as:
+5. Kullback-Leibler (K-L) Divergence: K-L divergence is a measure of the difference between two probability distributions. It quantifies how much one distribution differs from another. Mathematically, the K-L divergence between two discrete probability distributions P and Q is defined as:
 
 DKL(P || Q) = Σ P(x) * log2(P(x) / Q(x))
 
