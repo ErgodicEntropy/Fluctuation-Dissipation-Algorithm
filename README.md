@@ -76,6 +76,7 @@ Microscopic time-reversibility is a fundamental principle in physics and chemist
 Algorithmic Correspondence Rule of Thumb: 
 1. Specificity = Don’t restrict development to analogies and metaphors only. Instead, integrate actual functionalities and mechanisms (control flow of the code) from nature on top of mere analogies and metaphors.
 2. Irreplacability: if the control flow of the code could be described conceptually otherwise, then the algorithmic correspondence is merely analogical and/or metaphorical, and thus redundant.
+3. Validity
 ### F-D System:
 1. Linear (no chaos, no complexity, no threshold effects, no hysteresis effects, no multipicities of outputs given one input, no response absence...etc)
 2. Static: the system functionality is constant
