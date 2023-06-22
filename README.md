@@ -15,11 +15,11 @@ At the heart of all this lies the marvelous masterpiece of Ludwig Boltzmann; the
 
 where:
 
-∂f/∂t represents the partial derivative of the distribution function f with respect to time.
-v is the velocity vector of particles.
-∇ is the gradient operator in position space.
-∇<sub>v</sub> is the gradient operator in momentum space.
-F represents the external force acting on particles.
+∂f/∂t represents the partial derivative of the distribution function f with respect to time.\
+v is the velocity vector of particles.\
+∇ is the gradient operator in position space.\
+∇<sub>v</sub> is the gradient operator in momentum space.\
+F represents the external force acting on particles.\
 C[f] is the collision term, accounting for the interactions and collisions between particles.
 
 ## Boltzmann-Gibbs Distribution (Boltzmann factor)
