@@ -211,6 +211,7 @@ Exploration [exploring the search space]= Thermodynamic fluctuation-driven Shaki
 11. DHE conversion to UE (positive feedback loop due to Fluctuation-Dissipation theorem and Microscopic reversibility)
 12. Repeat until termination criteria are met
 
+![Flowchart](Images/Fluctuation_Dissipation_Flowchart.jpeg)
 ### Algorithm Hyperparameter tuning (Algorithm meta-functionality/model-parameters):
 1. M = 8 #Number of atoms in a molecule
 2. N = 50 # Number of molecules of the system
@@ -279,7 +280,6 @@ The Equipartition theorem states that in thermal equilibrium, each degree of fre
 The equipartition theorem is useful in the algorithm because it equally gives away the same exploration intensity (fluctuation level) to all molecules (solutions) in order to maximize coverage in the search space. This is motivated by the reasoning that it's better to have all molecules exploring the search space with an average fluctuation rate than to put all eggs in one or few basket molecules that nonetheless have above average fluctuation level (preferring uniform distribution of agitation levels over Zipfian distribution since it will increase coverage overall, especially in the case of discrete optimization problems!)
 
 
-### Diffusion theory (Einstein relation): Maximizing mobility (Continuous Optimization problems only)
-Increasing diffusivity via increasing electrical mobility (Einstein-Smoluchowski relation) or decreasing dynamic viscosity (Stokes-Einstein equation)...etc
 ### Memory-based Random Walk/Markov Chain (MSD Diffusion memoization): Minimzing depth via aspiration criteria (tabu tenure) and Loschmidt memory (correlational recording/tracking that break Time-Reversal symmetry and Molecular Chaos)
+
 
