@@ -203,8 +203,7 @@ Exploration [exploring the search space]= Thermodynamic fluctuation-driven Shaki
 10. CF = 0.8 # Cooling factor (closer to one in order to avoid premature convergence by making the cooling process progressive and gradual)
 11. C = 1.5 #Exploitation cost (though not necessary, but it's essential for the algorithm correspodence)
 
-#### there are two ways in quantifying the response: EPS-SR threshold relationship (but you lose proportionality) or Etot = SR x EPS (this relationship assumes the linearity of the system thus the proprotionality between Etot and EPS as well as absence of hysteresis effects...etc)
-10. Etot = E_P_S*S_R #Total energy of the system quantifying the strength of the resposne (linear response function)
+
 
 
 
@@ -216,6 +215,11 @@ Exploration [exploring the search space]= Thermodynamic fluctuation-driven Shaki
 5. FS = global/emergent Fluctuation level via Algorithmic Shaking of molecules (solutions)
 6. VE = Void Energy that is lost forever due to the 2nd law of thermodynamics (not necessary for the functioning of the algorithm as it acts as a validity test with actual physical theories)
 7. PS = molecular fluctuation that each molecule receives equally (Equipartition theorem, Virial theorem)
+8. Etot = E_P_S*S_R #Total energy of the system quantifying the strength of the resposne (linear response function)  #### there are two ways in quantifying the response: EPS-SR threshold relationship (but you lose proportionality) or Etot = SR x EPS (this relationship assumes the linearity of the system thus the proprotionality between Etot and EPS as well as absence of hysteresis effects...etc)
+9. H value
+10. Entropy
+11. Void Energy
+12. Kinetic Energy (Speed) distribution function
 
 ### F-D equation: capturing the conversion mechanism between DHE, Algorithmic Shaking and UE = DHE-AS equation + AS-UE energy:
 
@@ -240,9 +244,10 @@ Exploration [exploring the search space]= Thermodynamic fluctuation-driven Shaki
 2. Etot: while Etot > 0 (for each iteration; Etot = Etot - VE)
 3. Entropy Production: while S < Smax (for each iteration, S = S + VE) (Boltzmann's entropy formula)
 4. H decrease: while H > Hmin (for each iteration, H = H - VE) (H-theorem)
-5. Kinetic Energy/Speed- Molecules distribution function: while K-E/Speed Ditribution != M-B Distribution (density estimation-based comparison) (H-theorem)
-6. Boltzmann Transport equation = 3 + 4 + 5: Steady/Equilibrium state of the Boltzmann equation (Thermodynamic equilibrium)
-7. Optimal Solution found
+5. Void Energy increase: VE < VEmax
+6. Kinetic Energy/Speed- Molecules distribution function: while K-E/Speed Ditribution != M-B Distribution (density estimation-based comparison) (H-theorem)
+7. Boltzmann Transport equation = 3 + 4 + 5: Steady/Equilibrium state of the Boltzmann equation (Thermodynamic equilibrium)
+8. Optimal Solution found
 
 ### Fluctuation-Dissipation theorem as a feedback loop between Exploration and Exploitation: Pseudo-Hysteresis effect (internally generated perturbation and "smartness") + Pseudo-Actuator:
 External
