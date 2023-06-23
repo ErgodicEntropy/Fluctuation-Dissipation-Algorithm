@@ -94,7 +94,21 @@ DKL(P || Q) = Σ P(x) * log2(P(x) / Q(x))
 K-L divergence is not symmetric, meaning DKL(P || Q) is not the same as DKL(Q || P). It is always non-negative and reaches its minimum of 0 when P and Q are identical (Jensen-Shannon divergence or Variational Distance are symmetric versions of K-L divergence)
 
 ## Smart/Active Systems
-Moderation law
+Smart systems can be defined as interconnected and intelligent systems that utilize advanced technologies, such as artificial intelligence, data analytics, and connectivity, to enhance their functionality, efficiency, and adaptability. These systems leverage sensors, actuators, and computational capabilities to collect and analyze data from their environment, make informed decisions, and interact with users or other systems.
+
+Key characteristics of smart systems include:
+
+1. Sensing and Perception: Smart systems incorporate sensors and perception mechanisms to gather data about their environment. This allows them to monitor and sense relevant parameters, such as temperature, pressure, motion, or environmental conditions.
+
+2. Data Processing and Analysis: Smart systems employ advanced algorithms and data analytics techniques to process and analyze the collected data. This enables them to extract meaningful insights, detect patterns, make predictions, or optimize their operations based on the available information.
+
+3. Autonomous Decision-making: Smart systems are capable of making autonomous decisions based on the analyzed data and predefined rules or algorithms. They can adapt their behavior, optimize processes, or trigger appropriate actions to achieve desired outcomes.
+
+4. Connectivity and Communication: Smart systems often rely on connectivity technologies, such as the Internet of Things (IoT), to enable communication and data exchange with other systems or devices. This connectivity facilitates coordination, remote control, and integration with larger networks or platforms.
+
+5. Adaptability and Learning: Smart systems have the ability to learn from data and experiences, allowing them to adapt and improve their performance over time. They can adjust their behavior, optimize parameters, or update their algorithms based on feedback and changing circumstances.
+
+Smart systems can be found in various domains, including smart homes, smart cities, healthcare systems, transportation networks, industrial automation, and energy management. They aim to enhance efficiency, optimize resource utilization, improve decision-making, and provide personalized experiences by leveraging advanced technologies and intelligent capabilities.
 ## Fluctuation-Dissipation theorem
 Fluctuation-Dissipation theorem (Herbert Callen and Theodore Welton, 1951) is a theorem in statistical physics that entails, in the case of systems obeying detailed balance, that thermodynamic fluctuations can predict the response quantified by impedance/admittance (abstracted notion) and vice versa. Examples include Brownian motion, Johnson noise and Kirchhoff law of Thermal Radiation. The theorem provides a connection between the microscopic behavior of a system (fluctuations) and its macroscopic response (dissipation) in equilibrium conditions.
 
@@ -180,9 +194,9 @@ Exploitation [exploiting the current knowledge/solutions] = Energy Dissipation (
 Exploration [exploring the search space]= Thermodynamic fluctuation-driven Shaking (kinetic energy via Brownian motion, electrical energy via Johnson Noise, light energy via Thermal Radiation[Kirchhoff's law of TR]) (Microscopic = Reversible) = Delaying replacement
 
 ### Optimization Algorithm control flow (Flowchart): Algorithmization of the Boltzmann Transport equation (Algorithmic Discretization into Optimization steps)
-1. External Perturbation of the system
-2. Susceptibility tuning [handling of system-specific physical mechanisms]
-3. Dissipative forces tuning [2nd law of thermodynamics]
+1.Initialization
+2. Hyperparameter tuning
+3. External Perturbation of the system (just once in our case)
 4. System response function (useful energy + dissipated heat energy)
 5. Etot = UE + DHE [Etot distribution tuning]
 6. UE is used for exploitation (competition step) while DHE is fed back into the system microscopic particles (positive feedback loop due to Fluctuation-Dissipation theorem and Microscopic reversibility)
@@ -191,7 +205,7 @@ Exploration [exploring the search space]= Thermodynamic fluctuation-driven Shaki
 9. particles fluctuation acting as a pseudo-perturbation (weaker actually) via information exchange/communication protocol (collaboration step)
 10. Steering the macroscopic system towards favorable solutions found by particles fluctuations
 11. DHE conversion to UE (positive feedback loop due to Fluctuation-Dissipation theorem and Microscopic reversibility)
-12. Repeat until Etot tapers off to zero (preferably with unbalancing Etot distribution towards UE more than DHE as the algorithm goes)
+12. Repeat until termination criteria are met
 
 ### Algorithm Hyperparameter tuning (Algorithm meta-functionality/model-parameters):
 1. M = 8 #Number of atoms in a molecule
@@ -254,7 +268,7 @@ Exploration [exploring the search space]= Thermodynamic fluctuation-driven Shaki
 8. Optimal Solution found
 
 ### Fluctuation-Dissipation theorem as a feedback loop between Exploration and Exploitation: Pseudo-Hysteresis effect (internally generated perturbation and "smartness") + Pseudo-Actuator:
-After externally perturbing the thermodynamic system, the actuator converts the perturbation energy (usually electrical energy in industrial engineering) to a form of useful energy (electrical energy, kinetic energy, mechanical energy, light energy, acoustic energy...etc) 
+After externally perturbing the thermodynamic system, the actuator converts the perturbation energy (usually electrical energy in industrial engineering) to a form of useful energy (electrical energy, kinetic energy, mechanical energy, light energy, acoustic energy...etc) that is used for Exploitation in our case. However, due to the second law of thermodynamics, there is always a dissipated heat energy (Joule effect) that is "useless" and lost forever which, in our case, is going to enable Exploration via Fluctuation-Dissipation theorem by algorithmically "shaking" (thermal agitation/fluctuation) molecules constituing the thermodynamic system. Assuming that our thermodynamic system is linear (meaning there is no room for hysteresis effect), there is no way to generate useful energy after it tapers off from initial external perturbation (assuming that we perturb the system only once of course). However, thanks to the Fluctuation-Dissipation theorem, a temporary positive feedback look (up to a relaxation/saturation time) is triggered between Exploitation (Useful energy) and Exploration (Fluctuation energy) where part of fluctuation energy is converted to useful energy to do work (ie; Exploitation) while the rest is exhausted in Exploration. In this telling, Fluctuation-Dissipation theorem allows a sort of temporary pseudo-hysteresis effect to take place via internally generated perturbation (up to a relaxation/saturation time) that gives off pseudo-useful energy (exploitation). Such internal perturbation is generated by thermal fluctuation (algorithmic shaking of molecules) within the thermodynamic system itself, in that it acts as a sort of pseudo-actuator that partially converts fluctuation energy to useful energy, thus the positive feedback loop between exploration and exploitation. This feedback loop, though temporary, is going to differentiate this algorithm from other optimization algorithms.
 
 ### Equipartition theorem: Maximizing coverage and exploration
 The Equipartition theorem states that in thermal equilibrium, each degree of freedom of a particle (such as translational motion, rotational motion, and vibrational modes) contributes an equal amount of energy on average. Specifically, the theorem states that in a system at equilibrium and sufficiently high temperature, each quadratic degree of freedom contributes (1/2)kT to the total energy, where k is the Boltzmann constant and T is the temperature. In contrast to that, the Virial theorem relates the average kinetic energy and potential energy of a system of particles in equilibrium. It states that the time-averaged total kinetic energy of a system is equal to the negative of the time-averaged total potential energy multiplied by a factor of one-half. Mathematically, it can be expressed as 2avg(KE) = -avg(U), where avg(KE) represents the average kinetic energy and avg(U) represents the average potential energy. The Equipartition theorem focuses on the distribution of energy among different degrees of freedom of individual particles in thermal equilibrium. The Virial theorem, on the other hand, relates the average kinetic and potential energy of a system as a whole.
