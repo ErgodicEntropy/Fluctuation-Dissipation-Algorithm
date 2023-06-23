@@ -99,7 +99,7 @@ E_P_S = 3 #Strength of external perturbation
 S_R = 2 # susceptibilty rate: measure system's intrinsic sensitivity to perturbation (high susceptibility -> strong response) [Smart-Active Systems]
 CF = 0.8 # Cooling factor (closer to one in order to avoid premature convergence by making the cooling process progressive and gradual)
 C = 1.5 #Exploitation cost (though not necessary, but it's essential for the algorithm correspodence)
-Smax = kb*np.log(factorial(N)) #Maximum entropy 
+Smax = kb*math.log(factorial(N)) #Maximum entropy 
 Hmin = 1/Smax #Minimum H value
 MBD = Maxwell_Boltzmann_Distribution(N,False)
 
@@ -127,7 +127,7 @@ def Shaking_Distributor(FS): # This function is crucial for optimization, respon
     PS = 0.8*FS/N #Individual shaking of each molecule/solution (random seed) [methylating FS-UE conversion instead]
     return PS # All molecuels receive the same amount of shaking per iteration (Equipartition theorem, Virial theorem)
 
-def FD_EE_Feedback_Loop(FS): #Feedback loop between exploration and exploitation via a given FD equation (Dissipation -> Fluctuation [exploration] -> Useful energy [exploitation]
+def FD_EE_Feedback_Loop(UE,FS): #Feedback loop between exploration and exploitation via a given FD equation (Dissipation -> Fluctuation [exploration] -> Useful energy [exploitation]
         UE = UE + 0.2*FS
         return UE
 
@@ -140,7 +140,7 @@ def Fluctuation_Dissipation(UEC,DHEC): # This function is a one-for-all that bro
     UE, DHE = Total_Energy_Distributor(UEC, DHEC)
     FS = Heat_Energy_Distributor(DHE)[0]
     PS = Shaking_Distributor(FS)
-    IUE = FD_EE_Feedback_Loop(FS)
+    IUE = FD_EE_Feedback_Loop(UE,FS)
     UE = UE + IUE
     return UE, PS
 
