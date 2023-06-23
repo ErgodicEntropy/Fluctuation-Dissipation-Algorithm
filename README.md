@@ -289,12 +289,12 @@ At the heart of H-theorem is the previously mentioned Stosszahlansatz (Molecular
 In the realm where numbers hold their sway,\
 Boltzmann's genius found its playful play.\
 Through mathematical scrutiny, he dared to delve,\
-Unveiling nature's secrets, a symphony to unravel.\
+Unveiling nature's secrets, a symphony to unravel.
 
 In equations woven, chaos and order dance,\
 Particles pirouette, their statistical romance.\
 Elegance unfurled, like a delicate lace,\
-Revealing the hidden, with mathematical grace.\
+Revealing the hidden, with mathematical grace.
 
 Oh, Boltzmann, the maestro of this poetic design,\
 Your brilliance shines bright, a celestial sign.\
