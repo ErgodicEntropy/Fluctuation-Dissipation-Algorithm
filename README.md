@@ -91,6 +91,7 @@ DKL(P || Q) = Σ P(x) * log2(P(x) / Q(x))
 K-L divergence is not symmetric, meaning DKL(P || Q) is not the same as DKL(Q || P). It is always non-negative and reaches its minimum of 0 when P and Q are identical (Jensen-Shannon divergence or Variational Distance are symmetric versions of K-L divergence)
 
 ## Smart/Active Systems
+Moderation law
 ## Fluctuation-Dissipation theorem
 Fluctuation-Dissipation theorem (Herbert Callen and Theodore Welton, 1951) is a theorem in statistical physics that entails, in the case of systems obeying detailed balance, that thermodynamic fluctuations can predict the response quantified by impedance/admittance (abstracted notion) and vice versa. Examples include Brownian motion, Johnson noise and Kirchhoff law of Thermal Radiation. The theorem provides a connection between the microscopic behavior of a system (fluctuations) and its macroscopic response (dissipation) in equilibrium conditions.
 
@@ -250,7 +251,7 @@ Exploration [exploring the search space]= Thermodynamic fluctuation-driven Shaki
 8. Optimal Solution found
 
 ### Fluctuation-Dissipation theorem as a feedback loop between Exploration and Exploitation: Pseudo-Hysteresis effect (internally generated perturbation and "smartness") + Pseudo-Actuator:
-External
+After externally perturbing the thermodynamic system, the actuator converts the perturbation energy (usually electrical energy in industrial engineering) to a form of useful energy (electrical energy, kinetic energy, mechanical energy, light energy, acoustic energy...etc) 
 
 ### Equipartition theorem: Maximizing coverage and exploration
 The Equipartition theorem states that in thermal equilibrium, each degree of freedom of a particle (such as translational motion, rotational motion, and vibrational modes) contributes an equal amount of energy on average. Specifically, the theorem states that in a system at equilibrium and sufficiently high temperature, each quadratic degree of freedom contributes (1/2)kT to the total energy, where k is the Boltzmann constant and T is the temperature. In contrast to that, the Virial theorem relates the average kinetic energy and potential energy of a system of particles in equilibrium. It states that the time-averaged total kinetic energy of a system is equal to the negative of the time-averaged total potential energy multiplied by a factor of one-half. Mathematically, it can be expressed as 2avg(KE) = -avg(U), where avg(KE) represents the average kinetic energy and avg(U) represents the average potential energy. The Equipartition theorem focuses on the distribution of energy among different degrees of freedom of individual particles in thermal equilibrium. The Virial theorem, on the other hand, relates the average kinetic and potential energy of a system as a whole.
