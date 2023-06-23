@@ -3,7 +3,7 @@ Introducing the Fluctuation-Dissipation algorithm! An optimization algorithm ins
 ![Boltzmann](Images/Boltzmann2.jpg)
 
 
-About a bipolar man with nonetheless a thorough empirical scrutiny and attention to details, a visionary from beyond this world, who revolutionized physics in the most unprecdented of manners: Ludwig Boltzmann, the genius of disorder.\
+About a bipolar man with nonetheless a thorough empirical and mathematical scrutiny and attention to details, a visionary from beyond this world, who revolutionized physics in the most unprecdented of manners: Ludwig Boltzmann, the genius of disorder.\
 ![Boltzmann](Images/P7140526.jpg)\
 
 Boltzmann's brilliance unveils the poetic dance of particles, weaving a symphony of elegance through statistical beauty.
@@ -284,6 +284,25 @@ The equipartition theorem is useful in the algorithm because it equally gives aw
 
 ### Loschmidt memory (correlational recording/tracking that break Time-Reversal symmetry and Molecular Chaos): Minimzing depth via aspiration criteria
 At the heart of H-theorem is the previously mentioned Stosszahlansatz (Molecular Chaos hypothesis) that assumes that there are no correlations between particles before, during and after collisions in terms of starting points, kinetic energy or velocity directions. However, as shown in the solution to Loschmidt paradox (1895), such uncorrelated assumption is far from reality. In that telling, this can be exploited algorithmically on the level of depth ie; the cost of current best solution found, by keeping a track or a sort of "memory" (that I prefer to call Loschmidt memory because it's inspired from Loschmidt paradox) that keeps track of best solutions of the thermodynamic system since its inception. Thanks to Loschmidt memory, aspiration criteria method is possible to implement as to avoid high-cost current best solutions.
+
+## Poetic tribute to L. Boltzmann: 
+In the realm where numbers hold their sway,
+Boltzmann's genius found its playful play.
+Through mathematical scrutiny, he dared to delve,
+Unveiling nature's secrets, a symphony to unravel.
+
+In equations woven, chaos and order dance,
+Particles pirouette, their statistical romance.
+Elegance unfurled, like a delicate lace,
+Revealing the hidden, with mathematical grace.
+
+Oh, Boltzmann, the maestro of this poetic design,
+Your brilliance shines bright, a celestial sign.
+Through numbers and logic, a poet's dream you wove,
+Unlocking nature's mysteries, with a poet's love.
+
+
+
 
 
 
