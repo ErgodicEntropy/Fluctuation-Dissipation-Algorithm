@@ -3,8 +3,10 @@ Introducing the Fluctuation-Dissipation algorithm! An optimization algorithm ins
 ![Boltzmann](Images/Boltzmann2.jpg)
 
 
-About a bipolar man with a thorough empirical scrutiny and attention to details, a visionary from beyond this world, who revolutionized physics in the most unprecdented of manners: Ludwig Boltzmann, the genius of disorder.\
+About a bipolar man with nonetheless a thorough empirical scrutiny and attention to details, a visionary from beyond this world, who revolutionized physics in the most unprecdented of manners: Ludwig Boltzmann, the genius of disorder.\
 ![Boltzmann](Images/P7140526.jpg)\
+
+Boltzmann's brilliance unveils the poetic dance of particles, weaving a symphony of elegance through statistical beauty.
 This project could be summed up poetically by a beautiful quote from none other than the statistical physics legend himself:
 "the life contest is primarily a competition for available energy" - Ludwig Boltzmann 
 ## Kinetic Molecular theory (J.C. Maxwell, 1867)
