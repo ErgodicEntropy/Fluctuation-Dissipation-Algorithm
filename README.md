@@ -1,7 +1,7 @@
 # Fluctuation-Dissipation-Algorithm
 Introducing the Fluctuation-Dissipation algorithm! An optimization algorithm inspired from statistical physics notions such as the Boltzmann-Gibbs distribution as well as H-theorem, and more precisely Fluctuation-Dissipation theorem. This project is a tribute to the genius of Ludwig Boltzmann:
 ![Boltzmann](Images/Boltzmann2.jpg)\ ![Boltzmann](Images/P7140526.jpg)\
-This project could be described poetically by a beautiful quote from the legend himself:
+This project could be summed up poetically by a beautiful quote from none other than the legend himself:
 "the life contest is primarily a competition for available energy" - Ludwig Boltzmann 
 ## Kinetic Molecular theory (J.C. Maxwell, 1867)
 The kinetic molecular theory is a fundamental concept in physics and chemistry that explains the behavior of gases at the molecular level. It provides a framework for understanding the properties and characteristics of gases based on the motion and interactions of individual gas particles.
