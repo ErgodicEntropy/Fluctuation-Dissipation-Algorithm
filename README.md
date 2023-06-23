@@ -90,7 +90,7 @@ DKL(P || Q) = Σ P(x) * log2(P(x) / Q(x))
 
 K-L divergence is not symmetric, meaning DKL(P || Q) is not the same as DKL(Q || P). It is always non-negative and reaches its minimum of 0 when P and Q are identical (Jensen-Shannon divergence or Variational Distance are symmetric versions of K-L divergence)
 
-
+## Smart/Active Systems
 ## Fluctuation-Dissipation theorem
 Fluctuation-Dissipation theorem (Herbert Callen and Theodore Welton, 1951) is a theorem in statistical physics that entails, in the case of systems obeying detailed balance, that thermodynamic fluctuations can predict the response quantified by impedance/admittance (abstracted notion) and vice versa. Examples include Brownian motion, Johnson noise and Kirchhoff law of Thermal Radiation. The theorem provides a connection between the microscopic behavior of a system (fluctuations) and its macroscopic response (dissipation) in equilibrium conditions.
 
