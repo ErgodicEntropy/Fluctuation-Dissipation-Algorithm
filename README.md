@@ -1,6 +1,6 @@
 # Fluctuation-Dissipation-Algorithm
 Introducing the Fluctuation-Dissipation algorithm! An optimization algorithm inspired from statistical physics notions such as the Boltzmann-Gibbs distribution as well as H-theorem, and more precisely Fluctuation-Dissipation theorem. This project is a tribute to the genius of Ludwig Boltzmann:
-![Boltzmann](Images/Boltzmann2.jpg)\ 
+![Boltzmann](Images/Boltzmann2.jpg)
 About a bipolar man with scientific vision from beyond this world, who revolutionized physics: Ludwig Boltzmann, the genius of disorder.
 ![Boltzmann](Images/P7140526.jpg)\
 This project could be summed up poetically by a beautiful quote from none other than the statistical physics legend himself:
